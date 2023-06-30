@@ -1,14 +1,13 @@
 * {
    box-sizing: border-box;
  }
-
+ 
  /* Custom Fonts */
-
+ 
  @font-face {
    font-family: 'StoryBook';
    src: url('./fonts/Storybook.TTF') format('truetype');
  }
- 
  
  html, body {
    height: 100%;
@@ -21,15 +20,17 @@
  }
  
  /* Header Component Styles */
-
+ 
  .header--container {
+   position: relative;
    display: flex;
+   flex-direction: column;
    justify-content: center;
    align-items: center;
    height: 30vh; /* Adjust the height as needed */
    padding-top: 20px; /* Add space from the top */
  }
-
+ 
  .header--container {
    opacity: 0;
    animation: fade-in 4s forwards;
@@ -47,8 +48,21 @@
  .header--title {
    font-family: StoryBook, sans-serif;
    font-size: 90px;
-   color: #303138; 
-   text-shadow: 2px 2px 4px #394263; 
+   color: #303138;
+   text-shadow: 2px 2px 4px #394263;
    letter-spacing: 2px;
  }
  
+ /* Cardinals Logo below H1 */
+ 
+ .header--image {
+   position: absolute;
+   bottom: -30px; /* Adjust the positioning as needed */
+   left: 50%;
+   transform: translateX(-50%);
+   width: 200px; /* Adjust the width as needed */
+   height: auto;
+   border-radius: 50%;
+   mix-blend-mode: screen; /* Try different blend modes for desired effect */
+   opacity: 0.8; /* Adjust the opacity as needed */
+ }
