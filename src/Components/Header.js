@@ -15,6 +15,7 @@ export default function Header() {
             src={logoImage}
             alt="Cardinals Logo"
          />
+         <h4 className='est--title'>Est. 2004</h4>
      </div>
    );
  }
