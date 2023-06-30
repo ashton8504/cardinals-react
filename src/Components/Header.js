@@ -3,8 +3,8 @@
 export default function Headers(){
 
    return (
-      <>
-         <h1>The Cardinals</h1>
-      </>
+      <div className="header--container">
+         <h1 className="header--logo">The Cardinals</h1>
+      </div>
    )
 }
