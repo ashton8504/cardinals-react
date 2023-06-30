@@ -1,10 +1,16 @@
+import React, { useEffect, useState } from 'react';
 
 
-export default function Headers(){
+export default function Header() {
+  const [isVisible, setIsVisible] = useState(false);
 
-   return (
-      <div className="header--container">
-         <h1 className="header--logo">The Cardinals</h1>
-      </div>
-   )
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  return (
+    <div className={`header--container ${isVisible ? 'fade-in-out' : ''}`}>
+      <h1 className="header--title">The Cardinals</h1>
+    </div>
+  );
 }
