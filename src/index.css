@@ -30,7 +30,11 @@
    padding-top: 20px; /* Add space from the top */
  }
  
- .header--logo{
+ .header--logo {
    font-family: StoryBook, sans-serif;
    font-size: 90px;
+   color: #303138; 
+   text-shadow: 2px 2px 4px #394263; 
+   letter-spacing: 2px;
  }
+ 
