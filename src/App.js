@@ -1,9 +1,11 @@
 import Header from "./Components/Header"
+import Band from "./Components/Band"
 
 function App() {
   return (
     <div className="App">
-      <Header />
+        <Header />
+        <Band />
     </div>
   );
 }

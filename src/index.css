@@ -9,14 +9,15 @@
    src: url('./fonts/Storybook.TTF') format('truetype');
  }
  
- html, body {
+ html,
+ body {
    height: 100%;
    margin: 0;
    padding: 0;
  }
  
  body {
-   background: linear-gradient(to bottom, #f8f8f8, #3b466e 45%);
+   background: linear-gradient(to bottom, #f8f8f8, #3b466e 75%);
  }
  
  /* Header Component Styles */
@@ -29,11 +30,42 @@
    align-items: center;
    height: 30vh; /* Adjust the height as needed */
    padding-top: 20px; /* Add space from the top */
+   margin-bottom: 50px; /* Add margin at the bottom */
  }
  
- .header--container {
+ .header--title {
+   font-family: StoryBook, sans-serif;
+   font-size: 90px;
+   text-shadow: 2px 2px 4px #939396, 2px 2px 10px rgba(0, 0, 0, 0.3);
+   letter-spacing: 2px;
+   margin-top: 150px;
+   color: #7486fc;
+   -webkit-text-stroke: 2px #2f364e;
+ }
+ 
+ .est--title {
+   font-family: StoryBook, sans-serif;
+   color: #070708;
+   text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3);
+ }
+ 
+ /* Cardinals Logo below H1 */
+ 
+ .header--image {
+   width: 300px;
+   height: auto;
+   border-radius: 50%;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.45);
+   transition: transform 0.3s ease-in-out;
+   border: 4px solid rgb(45, 44, 44);
    opacity: 0;
    animation: fade-in 4s forwards;
+ }
+ 
+ .header--image:hover {
+   border-color: #e6e6ea;
+   box-shadow: 0 0 10px #2f364e;
+   transform: scale(1.05); /* Add scale increase on hover */
  }
  
  @keyframes fade-in {
@@ -45,36 +77,73 @@
    }
  }
  
- .header--title {
+ /* BAND SECTION CSS */
+ 
+ .band {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 150px; /* Adjust the margin-top value */
+   margin-bottom: 50px; /* Add margin at the bottom */
+ }
+ 
+ .band h2 {
    font-family: StoryBook, sans-serif;
-   font-size: 90px;
-   text-shadow: 2px 2px 4px #939396, 2px 2px 10px rgba(0, 0, 0, 0.3);
-   letter-spacing: 2px;
-   margin-top: 150px;
-   color: #7486fc;
-  -webkit-text-stroke: 2px #2f364e;
- }
-
- .est--title{
-   font-family: StoryBook, sans-serif;
-   color: #070708;
-   text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3);;
-
+   font-size: 24px; /* Adjust the font size as needed */
+   font-weight: bold; /* Add font weight as desired */
+   color: #0b0b0b;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add the desired text shadow */
+   margin-bottom: 10px; /* Adjust the margin-bottom value as desired */
+   text-align: center; /* Center the text */
  }
  
- /* Cardinals Logo below H1 */
- 
- .header--image {
-   width: 300px; /* Adjust the width as needed */
-   height: auto;
-   border-radius: 50%;
-   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.45); /* Add a subtle box shadow */
-   transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
-   border: 4px solid rgb(45, 44, 44);
+ .band-member-card {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 200px;
+   height: 200px;
  }
+ 
+ 
+ .band-members {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 20px;
+   justify-items: center;
+   width: 100%;
+ }
+ 
 
- .header--image:hover {
-   border-color: #e6e6ea;
-   box-shadow: 0 0 10px #2f364e;
- }
  
+ /* Mobile Styles */
+ 
+/* Mobile Styles */
+/* @media (max-width: 768px) {
+   .header--container {
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+  
+    .header--title {
+      font-size: 50px; 
+      margin-top: 100px;
+    }
+ 
+   .band {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin-top: 200px; 
+     margin-bottom: 20px; 
+   }
+ 
+   .band-members {
+     grid-template-columns: 1fr;
+     justify-items: center;
+     width: 90%;
+   }
+ 
+ }
+  */
