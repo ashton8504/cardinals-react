@@ -80,63 +80,72 @@
  /* BAND SECTION CSS */
  
  .band {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   margin-top: 150px; /* Adjust the margin-top value */
-   margin-bottom: 50px; /* Add margin at the bottom */
+   text-align: center;
+   margin-top: 200px;
  }
  
- .band h2 {
-   font-family: StoryBook, sans-serif;
-   font-size: 24px; /* Adjust the font size as needed */
-   font-weight: bold; /* Add font weight as desired */
-   color: #0b0b0b;
-   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add the desired text shadow */
-   margin-bottom: 10px; /* Adjust the margin-bottom value as desired */
-   text-align: center; /* Center the text */
+ .band-members {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 20px;
+   padding: 0 20px; 
+   margin: 0 auto; 
+   max-width: 1200px; 
+ }
+ 
+ 
+ .band-members::after {
+   content: '';
+   flex: auto;
  }
  
  .band-member-card {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   width: 200px;
-   height: 200px;
+   text-align: center;
+   width: 200px; /* Adjust the width as needed */
+   flex: 1 1 calc(30% - 20px); /* Adjust the percentage and gap size as needed */
+   margin-bottom: 20px;
  }
  
- 
- .band-members {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-gap: 20px;
-   justify-items: center;
+ .band-member-card-image-container {
    width: 100%;
+   height: 0;
+   padding-top: 100%; /* Maintain aspect ratio (1:1) */
+   position: relative;
+   overflow: hidden;
  }
  
-
+ .band-member-card-image {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 10%;
+ }
+ 
+ 
  
  /* Mobile Styles */
  
-/* Mobile Styles */
-/* @media (max-width: 768px) {
+ @media (max-width: 768px) {
    .header--container {
-      margin-top: 50px;
-      margin-bottom: 20px;
-    }
-  
-    .header--title {
-      font-size: 50px; 
-      margin-top: 100px;
-    }
+     margin-top: 50px;
+     margin-bottom: 20px;
+   }
+ 
+   .header--title {
+     font-size: 50px;
+     margin-top: 100px;
+   }
  
    .band {
      display: flex;
      flex-direction: column;
      align-items: center;
-     margin-top: 200px; 
-     margin-bottom: 20px; 
+     margin-top: 200px;
+     margin-bottom: 20px;
    }
  
    .band-members {
@@ -144,6 +153,5 @@
      justify-items: center;
      width: 90%;
    }
- 
  }
-  */
+ 

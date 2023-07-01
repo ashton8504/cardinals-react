@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logoImage from '../images/cardinalsLogoOne.png';
+import logoImage from '../images/logos/cardinalsLogoOne.png';
 
 export default function Header() {
    const [isVisible, setIsVisible] = useState(false);
