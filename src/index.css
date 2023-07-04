@@ -17,8 +17,12 @@
  }
  
  body {
+   min-height: 100vh;
+   margin: 0;
+   padding: 0;
    background: linear-gradient(to bottom, #f8f8f8, #3b466e 75%);
  }
+ 
  
  /* Header Component Styles */
  
