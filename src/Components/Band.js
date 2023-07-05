@@ -14,7 +14,7 @@ const Band = () => {
    { name: 'Ryan Adams', role: 'Guitar/Vox', image: DRAImage },
    { name: 'Brad Pemberton', role: 'Drums', image: bradImage },
    { name: 'Was Man', role: 'Bass', image: wasManImage },
-   { name: 'Chris Stills', role: 'Guitar', image: chrisImage },
+   { name: 'Chris Stills', role: 'Guitar/Vox', image: chrisImage },
    { name: 'MFC', role: 'Mach III', image: MFC },
    { name: 'Daniel Clarke', role: 'Keys', image: clarkeImage },
   ];
@@ -23,7 +23,8 @@ const Band = () => {
 
   return (
     <div className="band">
-      <h2>The MFC's</h2>
+        <h2 className='bandCard--header'>The MFC's</h2>
+        <hr />
       <div className="band-members">
          {bandMembers.map((member, index) => (
             <BandMemberCard
@@ -35,8 +36,8 @@ const Band = () => {
             />
          ))}
       </div>
-
-    </div>
+     </div>
+     
   );
 };
 
