@@ -54,6 +54,7 @@
    font-family: StoryBook, sans-serif;
    color: #070708;
    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3);
+   font-size: 26px;
  }
  
  /* Cardinals Logo below H1 */
@@ -85,6 +86,19 @@
  }
  
  /* BAND SECTION CSS */
+
+ /* HR to seperate header section from Band Cards */
+ hr {
+   margin-bottom: 100px;
+   width: 50%;
+   border: none; /* Remove the default horizontal line */
+   height: 3px; /* Set the height of the line */
+   background-color: #f7f7f7; /* Set a vibrant background color */
+   opacity: 0.8; /* Adjust the opacity for a subtle effect */
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+   border-radius: 2px; /* Apply rounded corners */
+}
+
  
  .band {
    text-align: center;
@@ -150,21 +164,20 @@
    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
  }
  
- 
- 
- /* Mobile Styles */
- 
- @media (max-width: 768px) {
+
+/* Mobile Styles */
+
+@media (max-width: 768px) {
    .header--container {
      margin-top: 50px;
      margin-bottom: 20px;
    }
- 
+
    .header--title {
      font-size: 50px;
      margin-top: 100px;
    }
- 
+
    .band {
      display: flex;
      flex-direction: column;
@@ -172,11 +185,15 @@
      margin-top: 200px;
      margin-bottom: 20px;
    }
- 
+
    .band-members {
+     display: grid;
      grid-template-columns: 1fr;
      justify-items: center;
      width: 90%;
    }
- }
- 
+
+   .band-member-card {
+     flex: 1 1 100%; /* Set the card width to 100% */
+   }
+}
