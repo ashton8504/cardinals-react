@@ -166,6 +166,52 @@
    line-height: 0; /* Set line height to reduce spacing */
  }
  
+ /* SETLIST SEARCH COMPONENTS STYLES */
+
+ .setlist-search {
+   text-align: center;
+   margin-top: 20px;
+ }
+ 
+ .setlist-search-header {
+   font-size: 28px;
+   font-weight: bold;
+ }
+ 
+ .setlist-search-input {
+   padding: 12px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   width: 300px;
+   margin-bottom: 16px;
+   font-size: 18px;
+ }
+ 
+ .setlist-results {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 16px;
+ }
+ 
+ .setlist-card {
+   background-color: #f9f9f9;
+   padding: 16px;
+   border-radius: 4px;
+ }
+ 
+ .setlist-card-name {
+   font-size: 20px;
+   font-weight: bold;
+ }
+ 
+ .setlist-card-details {
+   margin-top: 8px;
+ }
+ 
+ /* Additional styles and customizations as needed */
+ 
+ 
+ /* Additional styles and customizations as needed */
  
 
 /* Mobile Styles */
