@@ -37,7 +37,7 @@
    align-items: center;
    height: 30vh; /* Adjust the height as needed */
    padding-top: 20px; /* Add space from the top */
-   margin-bottom: 600px; /* Add margin at the bottom */
+   margin-bottom: 500px; /* Add margin at the bottom */
    margin-top: 300px;
  }
  
@@ -118,11 +118,10 @@
 
  .band-member-card {
    text-align: center;
-   width: 200px; /* Adjust the width as needed */
-   flex: 1 1 calc(30% - 20px); /* Adjust the percentage and gap size as needed */
+   width: calc(38% - 35px); /* Adjust the width to occupy 50% of the container with a gap of 20px */
    margin-bottom: 20px;
  }
- 
+
  .band-member-card-image-container {
    width: 100%;
    height: 0;
@@ -154,46 +153,62 @@
    font-family: StoryBook, sans-serif;
    color: whitesmoke;
    font-size: 42px;
-   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+   margin-bottom: 5px; /* Adjust as needed */
+   line-height: 1; /* Set line height to reduce spacing */
  }
-
- .band-member-card-role{
+ 
+ .band-member-card-role {
    font-family: Georgia, 'Times New Roman', Times, serif;
    font-size: 30px;
    color: whitesmoke;
-   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+   line-height: 0; /* Set line height to reduce spacing */
  }
+ 
  
 
 /* Mobile Styles */
-
 @media (max-width: 768px) {
    .header--container {
-     margin-top: 50px;
-     margin-bottom: 20px;
+     margin-top: 20px; /* Adjust the top margin to reduce the spacing */
+     height: auto;
+     padding: 20px 0;
    }
-
+ 
    .header--title {
      font-size: 50px;
-     margin-top: 100px;
+     margin-top: 50px;
+     text-shadow: 1px 1px 2px #939396, 1px 1px 5px rgba(0, 0, 0, 0.3);
    }
-
+ 
+   .est--title {
+     font-size: 20px;
+     margin-bottom: 20px;
+   }
+ 
+   .header--image {
+     width: 300px;
+   }
+ 
    .band {
      display: flex;
      flex-direction: column;
      align-items: center;
-     margin-top: 200px;
+     margin-top: 20px; /* Adjust the top margin to reduce the spacing */
      margin-bottom: 20px;
    }
-
+ 
    .band-members {
      display: grid;
      grid-template-columns: 1fr;
      justify-items: center;
      width: 90%;
+     margin-top: 20px; /* Adjust the top margin to reduce the spacing */
    }
-
+ 
    .band-member-card {
-     flex: 1 1 100%; /* Set the card width to 100% */
+     flex: 1 1 100%;
    }
-}
+ }
+ 

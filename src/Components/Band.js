@@ -10,35 +10,35 @@ import MFC from "../images/band/cardinalsFullBand.png"
 
 
 const Band = () => {
-  const bandMembers = [
-   { name: 'Ryan Adams', role: 'Guitar/Vox', image: DRAImage },
-   { name: 'Brad Pemberton', role: 'Drums', image: bradImage },
-   { name: 'Was Man', role: 'Bass', image: wasManImage },
-   { name: 'Chris Stills', role: 'Guitar/Vox', image: chrisImage },
-   { name: 'MFC', role: "", image: MFC },
-   { name: 'Daniel Clarke', role: 'Keys', image: clarkeImage },
-  ];
-
-  console.log(bandMembers);
-
-  return (
-    <div className="band">
-        <h2 className='bandCard--header'>Mach III</h2>
-        <hr />
-      <div className="band-members">
+   const bandMembers = [
+     { name: 'Ryan Adams', role: 'Guitar/Vox', image: DRAImage },
+     { name: 'Brad Pemberton', role: 'Drums', image: bradImage },
+     { name: 'Was Man', role: 'Bass', image: wasManImage },
+     { name: 'Chris Stills', role: 'Guitar/Vox', image: chrisImage },
+     { name: 'Daniel Clarke', role: 'Keys', image: clarkeImage },
+   ];
+ 
+   return (
+     <div className="band">
+       <h2 className="bandCard--header">Mach III</h2>
+       <div className="band-members">
          {bandMembers.map((member, index) => (
-            <BandMemberCard
-               key={index}
-               name={member.name}
-               role={member.role}
-               image={member.image}
-               className={index >= 3 ? 'band-member-card--bottom' : ''}
-            />
+           <div className="band-member-card" key={index}>
+             <div className="band-member-card-image-container">
+               <img
+                 className="band-member-card-image"
+                 src={member.image}
+                 alt={member.name}
+               />
+             </div>
+             <h3 className="band-member-card-name">{member.name}</h3>
+             <p className="band-member-card-role">{member.role}</p>
+           </div>
          ))}
-      </div>
+       </div>
      </div>
-     
-  );
-};
+   );
+ };
+ 
 
 export default Band;
